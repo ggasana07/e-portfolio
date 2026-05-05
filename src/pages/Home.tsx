@@ -83,7 +83,7 @@ export default function Home() {
             className="relative aspect-square md:aspect-[4/5] overflow-hidden border border-white/10"
           >
             <img
-              src="/gaby.png"
+              src="/gaby.jpeg"
               alt="Gasana Ineza Shukuru Gabriel"
               className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
               referrerPolicy="no-referrer"
