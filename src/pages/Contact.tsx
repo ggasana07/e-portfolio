@@ -1,12 +1,12 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Simulate submission
     setSubmitted(true);
@@ -60,11 +60,11 @@ export default function Contact() {
             <div className="pt-12 border-t border-white/10 max-w-xs">
                <h3 className="text-[11px] uppercase tracking-[0.3em] mb-6 text-white font-bold">Resources</h3>
                <div className="space-y-4">
-                   <a href="/letter.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group cursor-pointer group">
+                   <a href="/letter.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group cursor-pointer">
                     <span className="text-[10px] text-zinc-400 group-hover:text-white transition-colors tracking-wide">View Cover Letter</span>
                     <span className="text-[9px] text-zinc-600 uppercase tracking-widest border border-white/5 px-2 py-0.5 group-hover:border-white/20 transition-colors">PDF</span>
                   </a>
-                  <a href="/r.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group cursor-pointer group">
+                  <a href="/r.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group cursor-pointer">
                     <span className="text-[10px] text-zinc-400 group-hover:text-white transition-colors tracking-wide">View CV</span>
                     <span className="text-[9px] text-zinc-600 uppercase tracking-widest border border-white/5 px-2 py-0.5 group-hover:border-white/20 transition-colors">PDF</span>
                   </a>
@@ -108,7 +108,7 @@ export default function Contact() {
                 type="email"
                 required
                 className="w-full bg-transparent border-b border-white/10 py-2 text-[10px] focus:outline-none focus:border-white transition-colors uppercase tracking-widest text-white"
-                placeholder="AURORA@STUDIO.COM"
+                placeholder="ABC@GMAIL.COM"
                 value={formState.email}
                 onChange={e => setFormState({...formState, email: e.target.value})}
               />
@@ -135,6 +135,7 @@ export default function Contact() {
                   : 'bg-white text-black hover:bg-neutral-200 shadow-xl'
               }`}
             >
+              <Send className="w-4 h-4" />
               {submitted ? 'Inquiry Sent' : 'Send Inquiry'}
             </button>
           </form>

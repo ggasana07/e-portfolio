@@ -75,7 +75,7 @@ export const IMAGES: GalleryImage[] = [
   },
   {
     id: '10',
-    url: '/gaby.jpeg',
+    url: '/fll.jpeg',
     title: 'Portrait Study',
     category: 'event',
     width: 1200,
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
     id: 'p1',
     title: 'FLL Robotics Competition',
     category: 'Event',
-    coverUrl: '/gaby.jpeg',
+    coverUrl: '/fll.jpeg',
     description: 'A portrait-focused series that highlights poise, character, and visual storytelling through careful composition.',
     images: IMAGES.filter(i => i.url.toLowerCase().includes('gaby') || i.url.toLowerCase().includes('b2')),
   },
