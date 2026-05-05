@@ -75,7 +75,7 @@ export const IMAGES: GalleryImage[] = [
   },
   {
     id: '10',
-    url: '/fll.jpeg',
+    url: '/gaby.jpeg',
     title: 'Portrait Study',
     category: 'event',
     width: 1200,
@@ -112,6 +112,14 @@ export const IMAGES: GalleryImage[] = [
     category: 'portrait',
     width: 1976,
     height: 1317,
+  },
+  {
+    id: '10',
+    url: '/fll.jpeg',
+    title: 'FLL Robotics Competition',
+    category: 'event',
+    width: 1200,
+    height: 1200,
   }
 ];
 
