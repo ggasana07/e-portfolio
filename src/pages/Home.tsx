@@ -101,7 +101,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-zinc-400 text-sm leading-relaxed max-w-lg">
               <p>
-                I am an S5 student with a deep-seated passion for digital art and visual storytelling. 
+                I am an S6 student with a deep-seated passion for digital art and visual storytelling. 
                 My work is a continuous exploration of how technology and creativity intersect to create 
                 compelling narratives that resonate on a human level.
               </p>
@@ -120,7 +120,7 @@ export default function Home() {
                <div className="w-[1px] h-8 bg-white/10" />
                <div>
                   <p className="text-[10px] uppercase tracking-widest text-white font-bold mb-1">Education</p>
-                  <p className="text-[10px] uppercase tracking-widest text-zinc-500">S5 Student</p>
+                  <p className="text-[10px] uppercase tracking-widest text-zinc-500">S6 Student</p>
                </div>
             </div>
           </motion.div>
@@ -153,6 +153,21 @@ export default function Home() {
               <p className="text-[10px] uppercase tracking-widest opacity-40 mb-2">{project.category}</p>
               <h3 className="text-2xl font-serif italic text-white mb-4 group-hover:translate-x-2 transition-transform">{project.title}</h3>
               <p className="text-zinc-500 text-xs leading-relaxed max-w-sm">{project.description}</p>
+              {project.additionalLinks && project.additionalLinks.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {project.additionalLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-zinc-200 transition hover:border-white/40 hover:bg-white/10"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

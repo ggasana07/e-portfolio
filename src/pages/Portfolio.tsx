@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { IMAGES } from '../constants';
 import Gallery from '../components/Gallery';
 
 export default function Portfolio() {
   const [filter, setFilter] = useState<string>('all');
-  
-  const categories = ['all', 'landscape', 'portrait', 'architecture', 'street'];
+
+  useEffect(() => {
+    document.title = 'Gabriel | Professional Photography';
+  }, []);
+
+  const categories = ['all', 'event', 'portrait', 'street'];
 
   const filteredImages = filter === 'all' 
     ? IMAGES 

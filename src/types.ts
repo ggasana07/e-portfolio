@@ -15,6 +15,7 @@ export interface Project {
   category: string;
   description: string;
   images: GalleryImage[];
+  additionalLinks?: { label: string; url: string }[];
 }
 
 export interface BlogPost {
